@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>글쓰기 - allens note</title>
+</head>
+<body>
+  <h1>글 작성</h1>
+  <p>비밀번호를 입력하세요:</p>
+  <input type="password" id="pass" />
+  <button onclick="check()">확인</button>
+
+  <div id="editor" style="display:none;">
+    <textarea rows="10" cols="50" placeholder="여기에 글을 쓰세요..."></textarea>
+    <br />
+    <button>임시 저장</button>
+  </div>
+
+  <script>
+    function check() {
+      var pw = document.getElementById("pass").value;
+      if (pw === "allensecret") {
+        document.getElementById("editor").style.display = "block";
+      } else {
+        alert("비밀번호가 틀렸습니다.");
+      }
+    }
+  </script>
+</body>
+</html>
